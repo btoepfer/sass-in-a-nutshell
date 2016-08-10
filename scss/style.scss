@@ -1,0 +1,50 @@
+
+
+// Variablendefinition
+// Diese können anschließend an allen Stellen oder 
+// in den importierten Dateien genutzt werden, 
+// wenn die import-Anweisung nach der Variablendefinition erfolgt.
+$wrapping:40px;
+$color_first:#555;
+$color_second:blue;
+
+// Import der Datei "_normalize.scss" zur HTML5-Initialisierung
+@import "normalize";
+
+// Styledefinition für umgebenden Container
+.wrap {
+  padding:$wrapping;
+}
+
+// Styledefinition für den ersten Abschnitt
+// Die Definitionen können wie HTML geschachtelt werden, um eine 
+// deutlich bessere Lesbarkeit zu erreichen.
+.first-section { 
+  h1 {
+    font-size:3em;
+    color:$color_first;
+  } 
+  article {
+    h1 {
+      font-size:2em;
+      // Die Überschriften der Artikel sollen um 20% heller erscheinen
+      color:lighten($color_first, 20%);
+    }
+  }
+} 
+
+// Styledefinition für den ersten Abschnitt
+.second-section { 
+  h1 {
+    font-size:3em;
+    color:$color_second
+  } 
+  article {
+    h1 {
+      font-size:2em;
+      color:$color_second;
+      // Die Überschriften der Artikel sollen um 20% dunkler erscheinen
+      color:darken($color_second, 20%);
+    }
+  }
+} 
